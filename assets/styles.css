@@ -63,7 +63,7 @@ li{
 .span{
     padding: 20px;
     margin-top: 20px;
-    width: 95%;
+    width: 64%;
     background:#181c22;
     border: 0;
     float: left;
@@ -72,8 +72,8 @@ li{
 }
 .button2{
     padding: 20px;
-    width: 95% ;
-    float: left;
+    width: 30%;
+    float: right;
     background: #23282e;
     border: 0;
     margin-top: 20px;
