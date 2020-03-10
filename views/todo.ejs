@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Url-Shortener</title>
+		<script> 
+		function subm(){console.log('i');
+     var item = document.getElementById('item');
+     var todo = String(item.value)
+	 console.log('try',todo);
+	 console.log(todo.type);
+	 var xhttp = new XMLHttpRequest();	 
+	 xhttp.onreadystatechange = function() {
+  if (this.readyState == 4) {
+	console.log('ok',this.responseText);
+	document.getElementById('copyText').innerHTML = JSON.parse(this.responseText).shortenUrl
+  }
+};
+	xhttp.open("POST", "/url/shortenurl");
+	xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xhttp.send('url='+todo);
+  }
+</script>		
+<script>
+	function copyLink() {
+	  let copyText = document.getElementById("copyText") 
+  
+	  var selection = window.getSelection();
+  
+	  var range = document.createRange();
+  
+	  range.selectNodeContents(copyText);
+  
+	  selection.removeAllRanges();
+  
+	  selection.addRange(range);
+  
+	  document.execCommand('copy');
+	}
+  </script>
+
+
+		<link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<h1 class="center" >Url-Shortener</h1>
+		<div id="container">
+		<div id="table">
+			<input type="text" name="item" id='item' placeholder="Enter Url..." required />
+			<button onclick='subm()'>Shorten it</button>
+
+			<span id='copyText' class="span"><%=todos.url%></span>  
+			<button onclick='copyLink()' class="button2">Copy Link</button>
+			<!-- <span id="copyText"><%=todos.url%></span>
+			<input type="button"  class="btn btn-primary" background = "#000000" onclick="copyLink()" data-toggle="tooltip" title="Copy to Clipboard" value="copy link" readonly class = "right"/> -->
+		</div>
+		
+		</div>
+	<footer id = "footer" class="center">
+		<p>Developed By : Abhinav Lamba</p>
+		<p>Contact information: <a href="mailto:abhinavandevs@gmail.com">
+		abhinavandevs@gmail.com</a>.</p>
+	  </footer>
+	</body>
+</html>
