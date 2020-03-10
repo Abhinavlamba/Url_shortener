@@ -21,4 +21,4 @@ connectDatabase.connect()
 
 const PORT = 5000
 
-app.listen(PORT , () => console.log("Listening to the port 5000"))
+app.listen(process.env.PORT || 5000, () => console.log("Listening to the port 5000"))
