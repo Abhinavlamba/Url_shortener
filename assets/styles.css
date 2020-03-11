@@ -1,10 +1,12 @@
-html, body {
-    height: 100%;   
+html,
+body {
+    height: 100%;
     background: #0d1521;
     font-family: tahoma;
     color: #989898;
 }
-#table{
+
+#table {
     position: relative;
     width: 95%;
     background: #090d13;
@@ -13,27 +15,29 @@ html, body {
     padding: 20px;
     box-sizing: border-box;
 }
-#container{
+
+#container {
     min-height: 100%;
 }
-#table form:after{
+
+#table form:after {
     margin: 0;
     content: '';
     display: block;
     clear: both;
 }
 
-input[type="text"]{
+input[type="text"] {
     width: 70%;
     padding: 20px;
-    background:#181c22;
+    background: #181c22;
     border: 0;
     float: left;
     font-size: 20px;
     color: #989898;
 }
 
-button{
+button {
     padding: 20px;
     width: 30%;
     float: left;
@@ -45,13 +49,13 @@ button{
     font-size: 20px;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-li{
+li {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -60,17 +64,19 @@ li{
     cursor: pointer;
     letter-spacing: 1px;
 }
-.span{
+
+.span {
     padding: 20px;
     margin-top: 20px;
     width: 64%;
-    background:#181c22;
+    background: #181c22;
     border: 0;
     float: left;
     font-size: 20px;
     color: #989898;
 }
-.button2{
+
+.button2 {
     padding: 20px;
     width: 30%;
     float: right;
@@ -83,18 +89,21 @@ li{
     font-size: 20px;
 }
 
-li:hover{
+li:hover {
     text-decoration: line-through;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
+
 .center {
     text-align: center;
     margin: auto;
-  }
-.right{
-    text-align: right;
-    margin : auto;
 }
+
+.right {
+    text-align: right;
+    margin: auto;
+}
+
 #footer {
     clear: both;
     position: relative;
@@ -104,4 +113,3 @@ li:hover{
     color: #989898;
     margin-top: -100px;
 }
-
