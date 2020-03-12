@@ -10,13 +10,13 @@ router.get('/:code', async(req, res) => {
         const dbUrl = await Url.findOne({ code })
         const currentTime = Date.now() / 60000
         if (currentTime > dbUrl.expiryPeriod) {
-            res.send('Please create new one.')
+            res.status(200).send('Please create new one.')
         } else {
             const originalUrl = dbUrl.url
             return res.redirect(originalUrl)
         }
     } catch (error) {
-        res.json({ 'error': 'Server Error' })
+        res.status(400).json({ 'error': 'Server Error' })
     }
 })
 module.exports = router
