@@ -7,7 +7,7 @@ const connectDatabase = require('../Network/database')
 const baseUrl = "https://shorten-your-url-s.herokuapp.com/"
 
 const testUrl = {
-    url: "https://www.facebook.com/"
+    url: "https://www.google.com/"
 }
 let db = 0
 beforeEach(async(done) => {

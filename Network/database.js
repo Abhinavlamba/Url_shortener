@@ -9,6 +9,4 @@ const connect = async() => {
         console.log(error.message)
     }
 }
-module.exports = {
-    connect
-}
+module.exports = connect
