@@ -9,10 +9,10 @@ const baseUrl = "https://shorten-your-url-s.herokuapp.com/"
 const testUrl = {
     url: "https://www.google.com/"
 }
-let db = 0
+let db = true
 beforeEach(async(done) => {
-    if (db == 0) {
-        db = 1
+    if (db == false) {
+        db = true
         await connectDatabase.connect()
         done()
     } else {
