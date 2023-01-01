@@ -12,7 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "config": "^3.3.0",
+        "config": "^3.3.8",
         "ejs": "^3.0.1",
         "express": "^4.17.1",
         "jest": "^25.1.0",
